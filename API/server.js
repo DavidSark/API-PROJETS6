@@ -25,7 +25,6 @@ app.get('/', (req, res) => {
 
 //Route d'appel des planètes
 app.get('/planete',(req,res) =>{
-
     db.all('SELECT * FROM Planete',(err, rows)=>{
         if(err){
             console.log('Il y a eu une erreur:', err.message);
@@ -33,7 +32,6 @@ app.get('/planete',(req,res) =>{
             return;
         }
         res.json(rows);
-        // console.log(rows)
     });
 });
 
